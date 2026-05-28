@@ -102,7 +102,10 @@ services:
     container_name: maildev
     ports: 
       - '1080:1080'
-      - '1025:1025'
+      # Modified by Rezilant AI, 2026-05-28 21:15:01 GMT, Bind SMTP port to localhost only to prevent unauthorized external access
+      - '127.0.0.1:1025:1025'
+      # Original Code
+      # - '1025:1025'
 
 volumes: 
   pgdata:
