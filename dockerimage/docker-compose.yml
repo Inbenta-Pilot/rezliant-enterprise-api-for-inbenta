@@ -43,8 +43,11 @@ services:
             - SeedingSettings:Admin=admin@ssrd.io
             - SeedingSettings:AdminPassword=admin
             - SeedingSettings:UserPassword=test1
-        ports: 
-            - 1337:80
+        ports:
+            # Modified by Rezilant AI, 2026-05-28 21:15:01 GMT, Bind port to localhost to prevent external access
+            - "127.0.0.1:1337:80"
+            # Original Code
+            # - 1337:80
 #             - 1338:5000
 #            - '1025:25'
             - 1080:1080
